@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&display=swap');
+
+        h1,
+        h2,
+        h4 {
+            font-family: 'BioRhyme', serif;
+            font-size: 30px;
+        }
+
+        .nav-link {
+            color: #f27926!important;
+        }
+
+        p {
+            font-size: 13px;
+            color: #8f9dbc;
+            font-weight: bold;
+        }
+
+
+        .btn {
+            margin-top: 10px;
+			background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);			
+            border-radius: 40px;
+            border: none;
+			box-shadow: 2px 2px 2px black;
+        }
+
+        .navbackcolor {
+
+            background-color: #345;
+            color: #f27926;
+        }
+
+        .footbackcolor {
+            background-image: linear-gradient(#bdc3c7, #2c3e50);
+            color: #f27926;
+            text-align: center;
+
+        }
+
+        /* .navsub {
+	background: #f88379;
+	
+} */
+
+        .navborder {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: black;
+        }
+
+        .para1 {
+            color: white;
+            text-align: center;
+        }
+
+        .footfontsize {
+            font-size: large;
+        }
+		
+		.tourcolor{color: white;}
+		.zillacolor{color: #f27926;}
+		a:hover {
+    color: inherit;
+}

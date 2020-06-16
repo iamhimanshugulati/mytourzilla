@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=BioRhyme&display=swap');
+html{scroll-behavior: smooth;}
+
+        h1,
+        h2,
+        h4 {
+            font-family: 'BioRhyme', serif;
+        }
+
+
+        .carousel-item img {
+            height: 90vh;
+        }
+
+        .carousel-inner h1 {
+            position: absolute;
+            top: 30% !important;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .nav-link {
+            color: #f27926!important;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50% !important;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+        }
+
+        .hero-text h1 {
+            text-shadow: 2px 2px 2px black;
+            font-size: 50px;
+        }
+
+        .hero-text .htl {
+            text-shadow: 2px 2px 2px black;
+            position: absolute;
+            bottom: 0% !important;
+            left: 60%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+            width: 100px;
+            color: whitesmoke;
+             
+        }
+        .hero-text .tbl{
+           text-shadow: 2px 2px 2px black;
+            position: absolute;
+            bottom: 0% !important;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+            width: 100px;
+            color: whitesmoke;
+            
+
+        }
+        /*.table{position: absolute;
+            bottom: 0% !important;
+            left: 50%;
+            transform: translate(-50%, -50%);}*/
+
+
+        .hero-text h4 {
+            text-shadow: 2px 2px 2px black;
+        }
+
+        .bd {
+            background-color: red;
+            height: 2px;
+            margin-top: -30px;
+            width: 15%;
+        }
+
+        @media only screen and (max-width:600px) {
+            .sm-w-50 {
+                width: 300px;
+                margin: 0 auto;
+
+            }
+            .hero-text .htl {
+            text-shadow: 2px 2px 2px black;
+            position: absolute;
+            bottom: 0% !important;
+            left: 30%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+            width: 100px;
+            color: whitesmoke;
+             
+        }
+        .hero-text .tbl{
+           text-shadow: 2px 2px 2px black;
+            position: absolute;
+            bottom: 0% !important;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            z-index: 99;
+            width: 100px;
+            color: whitesmoke;
+
+            
+
+        }
+
+        }
+
+        p {
+            font-size: 13px;
+            color: #8f9dbc;
+            font-weight: bold;
+        }
+
+        .icon {
+            height: 15%;
+            width: 10%;
+        }
+
+        .btn {
+            margin-top: 10px;
+			background-image: linear-gradient(315deg, #f7b42c 0%, #fc575e 74%);			
+            border-radius: 40px;
+            border: none;
+			box-shadow: 2px 2px 2px black;
+			
+        }
+
+        #boxs {
+            height: 100%;
+            box-shadow: 5px 5px 10px gray, -10px -10px 10px black;
+            margin-top: 15px;
+            transition: 0.1s linear all;
+        }
+
+        #boxs:hover {
+            transform: translateY(-20px);
+        }
+
+        #boxs h4 {
+            font-weight: bold;
+            text-shadow: 2px 2px 2px gray;
+        }
+
+        #boxs h5 {
+            font-weight: bolder;
+            font-size: 15px;
+        }
+
+        #boxs h6 {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .off {
+            color: green;
+            font-weight: bold;
+        }
+
+        #boxs h5 i {
+            transition: 1s ease all;
+        }
+
+        #boxs h5 i:hover {
+            transform: rotate(360deg) !important;
+            color: forestgreen !important;
+            font-size: 25px;
+        }
+
+        #boxs img {
+            transition: 1s ease all;
+        }
+
+        #boxs img:hover {
+            transform: scale(1.1, 1.1);
+        }
+
+        #cover img {
+            height: 100% !important;
+        }
+
+        .hud p {
+            line-height: 0px !important;
+        }
+
+        .bd {
+            background-color: red;
+            height: 2px;
+            margin-top: -30px;
+            width: 30%;
+        }
+
+        @media only screen and (max-width:600px) {
+            .sm-w-50 {
+                width: 300px;
+                margin: 0 auto;
+
+            }
+
+        }
+
+        .navbackcolor {
+
+            background-color: #345;
+            color: #f27926;
+        }
+
+        .footbackcolor {
+            background-image: linear-gradient(#bdc3c7, #2c3e50);
+            color: #f27926;
+            text-align: center;
+
+        }
+
+        /* .navsub {
+	background: #f88379;
+	
+} */
+
+        .navborder {
+            padding-top: 0px;
+            padding-bottom: 0px;
+        }
+
+        .navbar-dark .navbar-nav .nav-link {
+            color: black;
+        }
+
+        footer .para1 {
+            color: white;
+            text-align: center;
+        }
+
+        /* .footstable{
+	height: 55px;
+} */
+        .card-img-top img {
+            height: 250px;
+        }
+
+        .jumb {background-color: #345;}
+
+        .carfont {
+            background-color: #a40606;
+            background-image: linear-gradient(315deg, #a40606 0%, #d98324 74%);
+
+        }
+
+        .hotelback {
+            background-color: #f2f2f2;
+
+        }
+
+        .footfontsize {
+            font-size: large;
+        }
+
+
+        .jumbtour:after {
+            content: "Welcome to TourZilla";
+            animation: text 8s infinite alternate;
+
+        }
+
+        @keyframes text {
+            0% {
+                opacity: 1;
+                content: "A Travel Guide"
+            }
+
+            25% {
+                opacity: 0;
+            }
+
+            45% {
+                opacity: 1;
+                content: "A Holiday Planner"
+            }
+
+            60% {
+                opacity: 0;
+            }
+
+            75% {
+                opacity: 1;
+                content: "Meant for Booking"
+            }
+
+            85% {
+                opacity: 0;
+            }
+
+            100% {
+                opacity: 1;
+                content: "No Advance Payment!!"
+            }
+        }
+
+        .formback {
+            background-image: linear-gradient(#bdc3c7, #2c3e50);
+
+		}
+		
+		.tourcolor{color: white;}
+		.zillacolor{color: #f27926;}
+		a:hover {
+    color: inherit;
+}
