@@ -1,38 +1,3 @@
-<?php
-$showAlert = false;
-$showError = false;
-// $showError2 = false;
-
-if($_SERVER["REQUEST_METHOD"] == "POST"){
-    include 'partials/_dbconnect.php';
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $cpassword = $_POST["cpassword"];
-    $exists=false;
-    
-    // if(empty($username) && empty($password) && empty($cpassword))
-    //    {
-    //        header('location:signup.php?error');
-    //    }
-    //    else{
-    //     $showError2 = "Please Fill All Details!!";
-    // }
-
-    if(($password == $cpassword) && $exists==false){
-        $sql = "INSERT INTO `users` ( `username`, `password`, `dt`) VALUES ('$username', '$password', current_timestamp())";
-        $result = mysqli_query($conn, $sql);
-        if ($result){
-            $showAlert = true;
-        }
-    }
-    else{
-        $showError = "Passwords do not match";
-    }
-    
-}
-    
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -83,26 +48,73 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 </head>
 
 <body class="bg-light">
-    <?php require 'partials/_nav.php' ?>
-    <?php
-    if($showAlert){
-    echo ' <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <strong>Success! </strong>Your account is now created and you can login by <span><a href="/mytourzilla/logsys/login.php"
-            class="reference text-decoration-none">Clicking Here!!</a></span>
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
+     <!-- Start NavBar -->
+     <nav class="navborder navbar navbar-expand-lg navbar-dark navbackcolor sticky-top">
+        <a class="navbar-brand mr-5" href="/mytourzilla">
+            <img src="https://1.bp.blogspot.com/-Z-6kAzul11c/Xs4HaF7Aq-I/AAAAAAAABCE/SkJFGf3W4SYJ1cMSxP95U8mms1u74GGFACK4BGAsYHg/w200-h73/Logo.png"
+                alt="" loading="lazy" width="150px" height="40px" class="img-fluid">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
-    </div> ';
-    }
-    if($showError){
-    echo ' <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Error!</strong> '. $showError.'
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">×</span>
-        </button>
-    </div> ';
-    }
-    ?>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 navbar-right">
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link mr-3" href="#">Hotels</a>
+                </li>
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link mr-3" href="#">Dine-In</a>
+                </li>
+
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link mr-3" href="#">Offers</a>
+
+                </li>
+
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link mr-3" href="/mytourzilla/blog">Blog</a>
+
+                </li>
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link mr-3" href="#">Explore
+                        India!!</a>
+
+                </li>
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link mr-3" href="#">About</a>
+
+                </li>
+                <li class="nav-item font-weight-bold">
+                    <a class="nav-link mr-3" href="/mytourzilla/help-centre">Help Centre</a>
+
+                </li>
+
+                <li class="nav-item dropdown mr-3 font-weight-bold">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        My Account
+                    </a>
+                    <div class="dropdown-menu navsub aria-labelledby=" navbarDropdown">
+                        <a class="dropdown-item font-weight-bold"
+                            href="/mytourzilla/logsys/login.html">Sign In</a>
+                        <a class="dropdown-item font-weight-bold"
+                            href="/mytourzilla/logsys/signup.html">Sign Up</a>
+                    </div>
+                </li>
+            </ul>
+            <svg class="bi bi-person-circle" width="3em" height="45px" viewBox="0 0 16 16" fill="currentColor"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M13.468 12.37C12.758 11.226 11.195 10 8 10s-4.757 1.225-5.468 2.37A6.987 6.987 0 0 0 8 15a6.987 6.987 0 0 0 5.468-2.63z" />
+                <path fill-rule="evenodd" d="M8 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                <path fill-rule="evenodd" d="M8 1a7 7 0 1 0 0 14A7 7 0 0 0 8 1zM0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8z" />
+            </svg>
+            <span class="font-weight-bold">&nbsp;&nbsp; Hi, Welcome!!</span>
+        </div>
+    </nav>
+    <!-- End NavBar -->
+
     <section>
         <div class="container-fluid pb-5">
             <div class="row">
@@ -135,7 +147,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
                                     <button type="submit" class="btn btn-primary mr-2 mb-2">Sign Up</button>
                                     <input class="btn btn-primary mb-2" type="reset" value="Reset">
                                 </form>
-                                <span class="para1 text-center mt-2"><a href="/mytourzilla/logsys/login.php"
+                                <span class="para1 text-center mt-2"><a href="/mytourzilla/logsys/login.html"
                                         class="reference text-decoration-none zillacolor">Already have an
                                         account?</a></span>
                             </div>

@@ -84,9 +84,9 @@
                     </a>
                     <div class="dropdown-menu navsub aria-labelledby=" navbarDropdown">
                         <a class="dropdown-item font-weight-bold"
-                            href="/mytourzilla/logsys/login.php">Sign In</a>
+                            href="/mytourzilla/logsys/login.html">Sign In</a>
                         <a class="dropdown-item font-weight-bold"
-                            href="/mytourzilla/logsys/signup.php">Sign Up</a>
+                            href="/mytourzilla/logsys/signup.html">Sign Up</a>
                     </div>
                 </li>
             </ul>
@@ -124,24 +124,6 @@
                             <h1 class="text-center"><a href="/mytourzilla/help-centre"
                                     class="text-decoration-none text-dark">Help Centre</a></h1>
                         </div>
-
-
-                                        <?php 
-                                        $Msg = "";
-                                        if(isset($_GET['error']))
-                                        {
-                                            $Msg = " Please Fill All Details!! ";
-                                            echo '<div class="alert alert-danger">'.$Msg.'</div>';
-                                        }
-            
-                                        if(isset($_GET['success']))
-                                        {
-                                            $Msg = " Your Message Has Been Sent, We Will Get In Touch With You ASAP 🙂 ";
-                                            echo '<div class="alert alert-success">'.$Msg.'</div>';
-                                        }
-                                    
-                                        ?>
-                                                  
 
 
                         <div class="card-body">
